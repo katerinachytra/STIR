@@ -115,6 +115,12 @@ main(int argc, char* argv[])
       use_PMRT = true;
       --argc;
       ++argv;
+    }    
+   if (argc > 1 && strcmp(argv[1], "--NOPMRT") == 0)
+    {
+      use_PMRT = false;
+      --argc;
+      ++argv;
     }
   if (!(argc == 5 || argc == 6))
     print_usage_and_exit();
